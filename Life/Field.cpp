@@ -48,13 +48,17 @@ void Field::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 
 unsigned int Field::ticksCount(unsigned int x, unsigned int y) {
     int sum = 0;
-    for (int i = 0; i < 3; ++i) {
-        for (int j = 0; j < 3; ++j) {
-            if (i != 1 or j != 1) {
-                int newX = (mImageSize.x + x - 1 + i) % mImageSize.x;
-                int newY = (mImageSize.y + y - 1 + j) % mImageSize.y;
-                if (mField->getPixel(newX, newY) == sf::Color::White) {
-                    ++sum;
+    for (int i = -1; i < 2; ++i) {
+        for (int j = -1; j < 2; ++j) {
+            if (i != 0 or j != 0) {
+                try {
+                    if (x + i < 0 || x + i > mImageSize.x) throw (x + i);
+                    if (y + j < 0 || y + j > mImageSize.y) throw (y + j);
+                    if (mField->getPixel(x + i, y + j) == sf::Color::White) {
+                        ++sum;
+                    }
+                } catch(...) {
+                    continue;
                 }
             }
         }
