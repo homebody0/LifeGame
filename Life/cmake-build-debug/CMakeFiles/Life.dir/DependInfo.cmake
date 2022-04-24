@@ -1,17 +1,15 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/c++/Life/Field.cpp" "D:/c++/Life/cmake-build-debug/CMakeFiles/Life.dir/Field.cpp.obj"
-  "D:/c++/Life/main.cpp" "D:/c++/Life/cmake-build-debug/CMakeFiles/Life.dir/main.cpp.obj"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "C:/SFML-2.5.1/include"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/GitHub/LifeGame/Life/Field.cpp" "CMakeFiles/Life.dir/Field.cpp.obj" "gcc" "CMakeFiles/Life.dir/Field.cpp.obj.d"
+  "C:/GitHub/LifeGame/Life/main.cpp" "CMakeFiles/Life.dir/main.cpp.obj" "gcc" "CMakeFiles/Life.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.

@@ -9,6 +9,7 @@ public:
     void processTicks();
     unsigned int ticksCount(unsigned int x, unsigned int y);
     void processEvent(sf::Event event);
+    bool isStop();
     ~Field() override;
 private:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
@@ -17,6 +18,7 @@ private:
     sf::Image* mField;
     sf::Texture* mFieldTexture;
     sf::Sprite* mFieldSprite;
+    bool* mIsStop;
 };
 
 #endif //LIFE_FIELD_H

@@ -10,6 +10,8 @@ Field::Field(sf::Vector2u size, const std::string& filename) {
     mFieldTexture->loadFromImage(*mField);
     mFieldSprite = new sf::Sprite;
     mFieldSprite->setTexture(*mFieldTexture);
+
+    mIsStop = new bool(true);
 }
 
 void Field::processTicks() {
@@ -46,41 +48,41 @@ void Field::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 
 unsigned int Field::ticksCount(unsigned int x, unsigned int y) {
     int sum = 0;
-//    for (int i = 0; i < 3; ++i) {
-//        for (int j = 0; j < 3; ++j) {
-//            if (i != 1 or j != 1) {
-//                int newX = (mImageSize.x + x - 1 + i) % mImageSize.x;
-//                int newY = (mImageSize.y + y - 1 + j) % mImageSize.y;
-//                if (mField->getPixel(newX, newY) == sf::Color::White) {
-//                    ++sum;
-//                }
-//            }
-//        }
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            if (i != 1 or j != 1) {
+                int newX = (mImageSize.x + x - 1 + i) % mImageSize.x;
+                int newY = (mImageSize.y + y - 1 + j) % mImageSize.y;
+                if (mField->getPixel(newX, newY) == sf::Color::White) {
+                    ++sum;
+                }
+            }
+        }
+    }
+//    if (mField->getPixel((mImageSize.x + x - 1) % mImageSize.x, (mImageSize.y + y - 1) % mImageSize.y) == sf::Color(255, 255, 255)) {
+//        ++sum;
 //    }
-    if (mField->getPixel((mImageSize.x + x - 1) % mImageSize.x, (mImageSize.y + y - 1) % mImageSize.y) == sf::Color(255, 255, 255)) {
-        ++sum;
-    }
-    if (mField->getPixel(x, (mImageSize.y + y - 1) % mImageSize.y) == sf::Color(255, 255, 255)) {
-        ++sum;
-    }
-    if (mField->getPixel((x + 1) % mImageSize.x, (mImageSize.y + y - 1) % mImageSize.y) == sf::Color(255, 255, 255)) {
-        ++sum;
-    }
-    if (mField->getPixel((mImageSize.x + x - 1) % mImageSize.x, y) == sf::Color(255, 255, 255)) {
-        ++sum;
-    }
-    if (mField->getPixel((x + 1) % mImageSize.x, y) == sf::Color(255, 255, 255)) {
-        ++sum;
-    }
-    if (mField->getPixel((mImageSize.x + x - 1) % mImageSize.x, (y + 1) % mImageSize.y) == sf::Color(255, 255, 255)) {
-        ++sum;
-    }
-    if (mField->getPixel(x, (y + 1) % mImageSize.y) == sf::Color(255, 255, 255)) {
-        ++sum;
-    }
-    if (mField->getPixel((x + 1) % mImageSize.x, (y + 1) % mImageSize.y) == sf::Color(255, 255, 255)) {
-        ++sum;
-    }
+//    if (mField->getPixel(x, (mImageSize.y + y - 1) % mImageSize.y) == sf::Color(255, 255, 255)) {
+//        ++sum;
+//    }
+//    if (mField->getPixel((x + 1) % mImageSize.x, (mImageSize.y + y - 1) % mImageSize.y) == sf::Color(255, 255, 255)) {
+//        ++sum;
+//    }
+//    if (mField->getPixel((mImageSize.x + x - 1) % mImageSize.x, y) == sf::Color(255, 255, 255)) {
+//        ++sum;
+//    }
+//    if (mField->getPixel((x + 1) % mImageSize.x, y) == sf::Color(255, 255, 255)) {
+//        ++sum;
+//    }
+//    if (mField->getPixel((mImageSize.x + x - 1) % mImageSize.x, (y + 1) % mImageSize.y) == sf::Color(255, 255, 255)) {
+//        ++sum;
+//    }
+//    if (mField->getPixel(x, (y + 1) % mImageSize.y) == sf::Color(255, 255, 255)) {
+//        ++sum;
+//    }
+//    if (mField->getPixel((x + 1) % mImageSize.x, (y + 1) % mImageSize.y) == sf::Color(255, 255, 255)) {
+//        ++sum;
+//    }
     return sum;
 }
 
@@ -115,4 +117,12 @@ void Field::processEvent(sf::Event event) {
         mField->saveToFile("..\\out.png");
     }
 
+    if(event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Space)
+    {
+        *mIsStop = !(*mIsStop);
+    }
+}
+
+bool Field::isStop() {
+    return (*mIsStop);
 }

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Life.dir/Field.cpp.obj"
+  "CMakeFiles/Life.dir/Field.cpp.obj.d"
   "CMakeFiles/Life.dir/main.cpp.obj"
+  "CMakeFiles/Life.dir/main.cpp.obj.d"
   "Life.exe"
   "Life.exe.manifest"
   "Life.pdb"

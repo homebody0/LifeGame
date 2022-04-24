@@ -8,7 +8,7 @@ int main() {
     RenderWindow window(sf::VideoMode(800, 800), "My window");
     window.setFramerateLimit(15);
     Field myField(window.getSize(), "..\\gun.png");
-
+    bool isStop = false;
     int i = 1;
 
     while (window.isOpen()) {
@@ -20,9 +20,8 @@ int main() {
             }
             myField.processEvent(event);
         }
-        if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+        if (!myField.isStop()) {
             myField.processTicks();
-            ++i;
         }
 
         window.clear();
