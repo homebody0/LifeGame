@@ -82,10 +82,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/GitHub/LifeGame/Life/Game.cpp">
+		<Unit filename="C:/GitHub/LifeGame/Life/Field.cpp">
 			<Option target="Life"/>
 		</Unit>
-		<Unit filename="C:/GitHub/LifeGame/Life/Game.h">
+		<Unit filename="C:/GitHub/LifeGame/Life/Field.h">
 			<Option target="Life"/>
 		</Unit>
 		<Unit filename="C:/GitHub/LifeGame/Life/main.cpp">

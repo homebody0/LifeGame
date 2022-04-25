@@ -128,29 +128,29 @@ Life/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/build
 .PHONY : Life/fast
 
-Game.obj: Game.cpp.obj
-.PHONY : Game.obj
+Field.obj: Field.cpp.obj
+.PHONY : Field.obj
 
 # target to build an object file
-Game.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Game.cpp.obj
-.PHONY : Game.cpp.obj
+Field.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Field.cpp.obj
+.PHONY : Field.cpp.obj
 
-Game.i: Game.cpp.i
-.PHONY : Game.i
+Field.i: Field.cpp.i
+.PHONY : Field.i
 
 # target to preprocess a source file
-Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Game.cpp.i
-.PHONY : Game.cpp.i
+Field.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Field.cpp.i
+.PHONY : Field.cpp.i
 
-Game.s: Game.cpp.s
-.PHONY : Game.s
+Field.s: Field.cpp.s
+.PHONY : Field.s
 
 # target to generate assembly for a file
-Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Game.cpp.s
-.PHONY : Game.cpp.s
+Field.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Field.cpp.s
+.PHONY : Field.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -185,9 +185,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Life
-	@echo ... Game.obj
-	@echo ... Game.i
-	@echo ... Game.s
+	@echo ... Field.obj
+	@echo ... Field.i
+	@echo ... Field.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
