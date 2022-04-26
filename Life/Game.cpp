@@ -4,7 +4,11 @@ Game::Game() {
     mWindow = new sf::RenderWindow(sf::VideoMode(800, 800), "My window");
     mWindow->setFramerateLimit(15);
 
+    mMenu = new Menu(mWindow->getSize());
+
     mIsStop = new bool(true);
+
+    mIsMenuOpen = new bool(true);
 
     mField = new Field(mWindow->getSize(), "..\\gun.png");
 
@@ -21,7 +25,10 @@ void Game::processing() {
             mWindow->close();
         }
         mField->addingLifeCells(*mEvent);
-        stopGameOfClickingOnSpace();
+        Menu::openMenu(*mEvent, mIsMenuOpen, mIsStop);
+        if (!*mIsMenuOpen) {
+            stopGameOfClickingOnSpace();
+        }
     }
 
     if(!*mIsStop) {
@@ -31,6 +38,9 @@ void Game::processing() {
 
     mWindow->clear();
     mWindow->draw(*mField);
+    if (*mIsMenuOpen) {
+        mWindow->draw(*mMenu);
+    }
     mWindow->display();
 }
 
@@ -45,5 +55,7 @@ Game::~Game() {
     delete mWindow;
     delete mEvent;
     delete mIsStop;
+    delete mField;
+    delete mMenu;
 }
 

@@ -11,6 +11,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/GitHub/LifeGame/Life/Button.cpp" "CMakeFiles/Life.dir/Button.cpp.obj" "gcc" "CMakeFiles/Life.dir/Button.cpp.obj.d"
   "C:/GitHub/LifeGame/Life/Field.cpp" "CMakeFiles/Life.dir/Field.cpp.obj" "gcc" "CMakeFiles/Life.dir/Field.cpp.obj.d"
   "C:/GitHub/LifeGame/Life/Game.cpp" "CMakeFiles/Life.dir/Game.cpp.obj" "gcc" "CMakeFiles/Life.dir/Game.cpp.obj.d"
+  "C:/GitHub/LifeGame/Life/Inventory.cpp" "CMakeFiles/Life.dir/Inventory.cpp.obj" "gcc" "CMakeFiles/Life.dir/Inventory.cpp.obj.d"
+  "C:/GitHub/LifeGame/Life/Menu.cpp" "CMakeFiles/Life.dir/Menu.cpp.obj" "gcc" "CMakeFiles/Life.dir/Menu.cpp.obj.d"
   "C:/GitHub/LifeGame/Life/main.cpp" "CMakeFiles/Life.dir/main.cpp.obj" "gcc" "CMakeFiles/Life.dir/main.cpp.obj.d"
   )
 

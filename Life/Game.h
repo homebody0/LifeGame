@@ -3,6 +3,7 @@
 
 #include "SFML/Graphics.hpp"
 #include "Field.h"
+#include "Menu.h"
 
 class Game{
 public:
@@ -15,7 +16,9 @@ private:
     sf::RenderWindow* mWindow;
     sf::Event* mEvent;
     bool* mIsStop;
+    bool* mIsMenuOpen;
     Field* mField;
+    Menu* mMenu;
 };
 
 #endif //LIFE_GAME_H

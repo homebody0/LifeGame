@@ -100,6 +100,18 @@
 		<Unit filename="C:/GitHub/LifeGame/Life/Game.h">
 			<Option target="Life"/>
 		</Unit>
+		<Unit filename="C:/GitHub/LifeGame/Life/Inventory.cpp">
+			<Option target="Life"/>
+		</Unit>
+		<Unit filename="C:/GitHub/LifeGame/Life/Inventory.h">
+			<Option target="Life"/>
+		</Unit>
+		<Unit filename="C:/GitHub/LifeGame/Life/Menu.cpp">
+			<Option target="Life"/>
+		</Unit>
+		<Unit filename="C:/GitHub/LifeGame/Life/Menu.h">
+			<Option target="Life"/>
+		</Unit>
 		<Unit filename="C:/GitHub/LifeGame/Life/main.cpp">
 			<Option target="Life"/>
 		</Unit>

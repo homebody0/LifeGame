@@ -1,5 +1,5 @@
-CMakeFiles/Life.dir/main.cpp.obj: C:\GitHub\LifeGame\Life\main.cpp \
- C:/SFML-2.5.1/include/SFML/Graphics.hpp \
+CMakeFiles/Life.dir/Menu.cpp.obj: C:\GitHub\LifeGame\Life\Menu.cpp \
+ C:\GitHub\LifeGame\Life\Menu.h C:/SFML-2.5.1/include/SFML/Graphics.hpp \
  C:/SFML-2.5.1/include/SFML/Window.hpp \
  C:/SFML-2.5.1/include/SFML/System.hpp \
  C:/SFML-2.5.1/include/SFML/Config.hpp \
@@ -244,6 +244,4 @@ CMakeFiles/Life.dir/main.cpp.obj: C:\GitHub\LifeGame\Life\main.cpp \
  C:/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp \
  C:/SFML-2.5.1/include/SFML/Graphics/Text.hpp \
  C:/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream \
- C:\GitHub\LifeGame\Life\Game.h C:\GitHub\LifeGame\Life\Field.h \
- C:\GitHub\LifeGame\Life\Menu.h C:\GitHub\LifeGame\Life\Button.h
+ C:\GitHub\LifeGame\Life\Button.h

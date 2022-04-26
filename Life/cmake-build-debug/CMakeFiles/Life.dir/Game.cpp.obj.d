@@ -244,4 +244,5 @@ CMakeFiles/Life.dir/Game.cpp.obj: C:\GitHub\LifeGame\Life\Game.cpp \
  C:/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp \
  C:/SFML-2.5.1/include/SFML/Graphics/Text.hpp \
  C:/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp \
- C:\GitHub\LifeGame\Life\Field.h
+ C:\GitHub\LifeGame\Life\Field.h C:\GitHub\LifeGame\Life\Menu.h \
+ C:\GitHub\LifeGame\Life\Button.h
