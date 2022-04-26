@@ -6,10 +6,9 @@
 class Field : public sf::Drawable{
 public:
     Field(sf::Vector2u mSize, const std::string& filename);
-    void processTicks();
-    unsigned int ticksCount(unsigned int x, unsigned int y);
-    void processEvent(sf::Event event);
-    bool isStop();
+    void updateCells();
+    unsigned int countCells(unsigned int x, unsigned int y);
+    void addingLifeCells(sf::Event event);
     ~Field() override;
 private:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
@@ -18,7 +17,6 @@ private:
     sf::Image* mField;
     sf::Texture* mFieldTexture;
     sf::Sprite* mFieldSprite;
-    bool* mIsStop;
 };
 
 #endif //LIFE_FIELD_H
