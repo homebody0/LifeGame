@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 project(Life)
 set(CMAKE_CXX_STANDARD 17)
-add_executable(Life main.cpp Field.h Field.cpp Game.h Game.cpp)
+add_executable(Life main.cpp Field.h Field.cpp)
 set(SFML_ROOT C:/SFML-2.5.1)
 set(SFML_STATIC_LIBRARIES FALSE)
 #include_directories(${SFML_ROOT}/lib)

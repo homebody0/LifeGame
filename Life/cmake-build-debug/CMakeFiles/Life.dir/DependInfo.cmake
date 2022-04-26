@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/GitHub/LifeGame/Life/Field.cpp" "CMakeFiles/Life.dir/Field.cpp.obj" "gcc" "CMakeFiles/Life.dir/Field.cpp.obj.d"
-  "C:/GitHub/LifeGame/Life/Game.cpp" "CMakeFiles/Life.dir/Game.cpp.obj" "gcc" "CMakeFiles/Life.dir/Game.cpp.obj.d"
   "C:/GitHub/LifeGame/Life/main.cpp" "CMakeFiles/Life.dir/main.cpp.obj" "gcc" "CMakeFiles/Life.dir/main.cpp.obj.d"
   )
 
