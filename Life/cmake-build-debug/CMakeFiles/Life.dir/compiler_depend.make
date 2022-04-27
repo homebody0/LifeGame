@@ -747,7 +747,9 @@ CMakeFiles/Life.dir/Game.cpp.obj: ../Game.cpp \
   C:/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp \
   ../Field.h \
   ../Menu.h \
-  ../Button.h
+  ../Button.h \
+  ../Inventory.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream
 
 CMakeFiles/Life.dir/Inventory.cpp.obj: ../Inventory.cpp \
   ../Inventory.h \
@@ -995,7 +997,8 @@ CMakeFiles/Life.dir/Inventory.cpp.obj: ../Inventory.cpp \
   C:/SFML-2.5.1/include/SFML/Graphics/Glsl.inl \
   C:/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp \
   C:/SFML-2.5.1/include/SFML/Graphics/Text.hpp \
-  C:/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp
+  C:/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream
 
 CMakeFiles/Life.dir/Menu.cpp.obj: ../Menu.cpp \
   ../Menu.h \
@@ -1496,7 +1499,8 @@ CMakeFiles/Life.dir/main.cpp.obj: ../main.cpp \
   ../Game.h \
   ../Field.h \
   ../Menu.h \
-  ../Button.h
+  ../Button.h \
+  ../Inventory.h
 
 
 ../Button.cpp:

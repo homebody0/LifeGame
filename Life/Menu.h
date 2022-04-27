@@ -8,7 +8,7 @@
 class Menu: public sf::Drawable{
 public:
     Menu(sf::Vector2u sizeWindow);
-    static void openMenu(sf::Event event, bool* isMenuOpen,bool* isStop);
+    static void openMenu(sf::Event event, bool* isMenuOpen, bool* isStop);
     ~Menu() override;
 private:
 

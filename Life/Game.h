@@ -4,6 +4,7 @@
 #include "SFML/Graphics.hpp"
 #include "Field.h"
 #include "Menu.h"
+#include "Inventory.h"
 
 class Game{
 public:
@@ -17,8 +18,10 @@ private:
     sf::Event* mEvent;
     bool* mIsStop;
     bool* mIsMenuOpen;
+    bool* mIsInventoryOpen;
     Field* mField;
     Menu* mMenu;
+    Inventory* mInventory;
 };
 
 #endif //LIFE_GAME_H
