@@ -17,9 +17,11 @@ private:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
     static bool isFigureContainPoint(sf::Vector2f pointPosition, sf::FloatRect figure);
     std::vector<sf::Sprite*>* mFiguresSprite;
+    std::vector<sf::Texture*>* mFiguresTexture;
     std::vector<sf::Image*>* mFiguresImage;
     int* mCountOfX;
     sf::Vector2f* mSizeOneFigure;
+    sf::RectangleShape* mBackground;
 };
 
 #endif //LIFE_INVENTORY_H

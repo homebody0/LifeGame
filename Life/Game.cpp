@@ -29,12 +29,14 @@ void Game::processing() {
         if (mEvent->type == sf::Event::Closed) {
             mWindow->close();
         }
-        mField->addingLifeCells(*mEvent);
         Menu::openMenu(*mEvent, mIsMenuOpen, mIsStop);
         if (!*mIsMenuOpen) {
             Inventory::openInventory(*mEvent, mIsInventoryOpen, mIsStop);
             if (!*mIsInventoryOpen) {
                 stopGameOfClickingOnSpace();
+                if (*mIsStop) {
+                    mField->addingLifeCells(*mEvent);
+                }
             }
         }
     }
