@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/GitHub/LifeGame/Life/Classes/Button.cpp" "CMakeFiles/Life.dir/Classes/Button.cpp.obj" "gcc" "CMakeFiles/Life.dir/Classes/Button.cpp.obj.d"
   "C:/GitHub/LifeGame/Life/Classes/Field.cpp" "CMakeFiles/Life.dir/Classes/Field.cpp.obj" "gcc" "CMakeFiles/Life.dir/Classes/Field.cpp.obj.d"
+  "C:/GitHub/LifeGame/Life/Classes/Figure.cpp" "CMakeFiles/Life.dir/Classes/Figure.cpp.obj" "gcc" "CMakeFiles/Life.dir/Classes/Figure.cpp.obj.d"
   "C:/GitHub/LifeGame/Life/Classes/Game.cpp" "CMakeFiles/Life.dir/Classes/Game.cpp.obj" "gcc" "CMakeFiles/Life.dir/Classes/Game.cpp.obj.d"
   "C:/GitHub/LifeGame/Life/Classes/Inventory.cpp" "CMakeFiles/Life.dir/Classes/Inventory.cpp.obj" "gcc" "CMakeFiles/Life.dir/Classes/Inventory.cpp.obj.d"
   "C:/GitHub/LifeGame/Life/Classes/Menu.cpp" "CMakeFiles/Life.dir/Classes/Menu.cpp.obj" "gcc" "CMakeFiles/Life.dir/Classes/Menu.cpp.obj.d"

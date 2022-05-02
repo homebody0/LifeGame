@@ -4,47 +4,44 @@ Inventory::Inventory(sf::Vector2f sizeWindow, int countOnHorizontal) {
     mCountOfX = new int;
     *mCountOfX = countOnHorizontal;
 
+    mIsShowInformation = new bool(false);
+
     mSizeOneFigure = new sf::Vector2f;
-    *mSizeOneFigure = sf::Vector2f(sizeWindow.x / (float)(countOnHorizontal + 1), sizeWindow.y / (float)(countOnHorizontal + 1));
 
     mBackground = new sf::RectangleShape;
     mBackground->setSize(sizeWindow);
     mBackground->setFillColor(sf::Color(30, 30, 30));
 
-    mFiguresSprite = new std::vector<sf::Sprite*>;
+    mFigures = new std::vector<Figure*>;
 
-    mFiguresTexture = new std::vector<sf::Texture*>;
+    mVerticalLines = new std::vector<sf::RectangleShape*>;
+    mHorizontalLines = new std::vector<sf::RectangleShape*>;
+
+    for (int i = 0; i < countOnHorizontal - 1; ++i) {
+        mVerticalLines->push_back(new sf::RectangleShape);
+        mVerticalLines->back()->setFillColor(sf::Color(227, 66, 52));
+    }
 
     mDraggingSprite = new sf::Sprite;
     mDraggingTexture = new sf::Texture;
-    mDraggingSpriteNumber = new int;
-    mPreviousMousePosition = new sf::Vector2f;
+    mClickFigureNumber = new int;
     mIsDragging = new bool(false);
 
     mScrollDistance = new float(0);
 }
 
-void Inventory::addFigure(const std::string& imageFilename) {
-
-    mFiguresTexture->push_back(new sf::Texture());
-    mFiguresTexture->back()->loadFromFile(imageFilename);
-
-    mFiguresSprite->push_back(new sf::Sprite(*(mFiguresTexture->back())));
-    //scale зависит только от длины(х) размера mSizeOneFigure
-    float scale = std::min(mSizeOneFigure->x / (float)mFiguresTexture->back()->getSize().x,
-                           mSizeOneFigure->y / (float)mFiguresTexture->back()->getSize().y);
-    mFiguresSprite->back()->setScale(scale, scale);
-
-    mFiguresSprite->back()->setPosition((mSizeOneFigure->x + mSizeOneFigure->x / (float)*mCountOfX) * (float)((mFiguresSprite->size() - 1) % *mCountOfX),
-                                  (mSizeOneFigure->y + mSizeOneFigure->y / (float)*mCountOfX) * (float)((mFiguresSprite->size() - 1) / *mCountOfX));
-
-//    mFiguresSprite->back()->setPosition(sf::Vector2f(0.0f, 0.0f));
-//    mFiguresSprite->back()->setColor(sf::Color(120, 120, 120));
+void Inventory::addFigure(const std::string& imageFilename, const std::string& informationFilename) {
+    mFigures->push_back(new Figure());
+    mFigures->back()->loadFromFile(imageFilename, informationFilename);
+    if (mFigures->size() % *mCountOfX == 1) {
+        mHorizontalLines->push_back(new sf::RectangleShape);
+        mHorizontalLines->back()->setFillColor(sf::Color(227, 66, 52));
+    }
 }
 
 int Inventory::getFigureAt(sf::Vector2f mousePosition) {
-    for (int i = 0; i < mFiguresSprite->size(); ++i) {
-        if (mFiguresSprite->at(i)->getGlobalBounds().contains(mousePosition)) {
+    for (int i = 0; i < mFigures->size(); ++i) {
+        if (mFigures->at(i)->getGlobalBounds().contains(mousePosition)) {
             return i;
         }
     }
@@ -55,25 +52,32 @@ void Inventory::scroll(sf::Event *event) {
     float distance = 20;
     if (event->type == sf::Event::MouseWheelMoved) {
         if (event->mouseWheel.delta < 0) {
-            for(sf::Sprite* figure: *mFiguresSprite) {
-                *mScrollDistance += distance;
-            }
+            *mScrollDistance -= distance;
         } else {
-            for(sf::Sprite* figure: *mFiguresSprite) {
-                *mScrollDistance -= distance;
-            }
+            *mScrollDistance += distance;
         }
     }
-
+    if (*mScrollDistance > 0) {
+        *mScrollDistance = 0.0f;
+    }
 }
 
 void Inventory::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-    if (*mIsDragging) {
+    if (*mIsShowInformation) {
+        target.draw(*mFigures->at(*mClickFigureNumber)->getInformation());
+    }
+    else if (*mIsDragging) {
         target.draw(*mDraggingSprite);
-    } else{
+    } else {
         target.draw(*mBackground);
-        for (sf::Sprite *figure: *mFiguresSprite) {
+        for (Figure *figure: *mFigures) {
             target.draw(*figure);
+        }
+        for (sf::RectangleShape* line: *mVerticalLines) {
+            target.draw(*line);
+        }
+        for (sf::RectangleShape* line: *mHorizontalLines) {
+            target.draw(*line);
         }
     }
 }
@@ -81,19 +85,30 @@ void Inventory::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 Inventory::~Inventory() {
     delete mCountOfX;
     delete mSizeOneFigure;
-
-    for (int i = 0; i < mFiguresSprite->size(); ++i) {
-        delete mFiguresSprite->at(i);
-        delete mFiguresTexture->at(i);
-    }
-    delete mFiguresSprite;
-    delete mFiguresTexture;
     delete mBackground;
+
+    for (auto & figure : *mFigures) {
+        delete figure;
+    }
+    delete mFigures;
+
+    for (auto & line : *mVerticalLines) {
+        delete line;
+    }
+    delete mVerticalLines;
+
+    for (auto & line : *mHorizontalLines) {
+        delete line;
+    }
+    delete mHorizontalLines;
+
+    delete mScrollDistance;
+
+    delete mIsShowInformation;
 
     delete mDraggingSprite;
     delete mDraggingTexture;
-    delete mDraggingSpriteNumber;
-    delete mPreviousMousePosition;
+    delete mClickFigureNumber;
     delete mIsDragging;
 }
 
@@ -107,49 +122,77 @@ void Inventory::openInventory(sf::Event event, bool *isInventoryOpen, bool *isSt
 }
 
 void Inventory::dragDrop(sf::Event event, sf::Vector2f mousePosition, sf::Sprite *inputSprite, bool *isInput) {
-    if (event.type == sf::Event::MouseButtonReleased) {
+    if (event.type == sf::Event::KeyReleased && *mIsShowInformation) {
+        *mIsShowInformation = false;
+    } else if (event.type == sf::Event::MouseButtonReleased) {
         if (event.mouseButton.button == sf::Mouse::Left) {
             if (*mIsDragging) {
                 *isInput = true;
                 *inputSprite = *mDraggingSprite;
                 *mIsDragging = false;
             } else {
-                *mDraggingSpriteNumber = getFigureAt(mousePosition);
-                if (*mDraggingSpriteNumber != -1) {
+                *mClickFigureNumber = getFigureAt(mousePosition);
+                if (*mClickFigureNumber != -1) {
                     *mIsDragging = true;
-                    *mDraggingSprite = *mFiguresSprite->at(*mDraggingSpriteNumber);
+                    *mDraggingSprite = mFigures->at(*mClickFigureNumber)->getSprite();
                     mDraggingSprite->setScale(1, 1);
-                    *mPreviousMousePosition = mousePosition;
                 }
             }
         } else if (event.mouseButton.button == sf::Mouse::Right) {
-            *mIsDragging = false;
+            if (*mIsDragging) {
+                *mIsDragging = false;
+            } else {
+                *mClickFigureNumber = getFigureAt(mousePosition);
+                if (*mClickFigureNumber != -1) {
+                    *mIsShowInformation = true;
+                }
+            }
         }
     }
     if (*mIsDragging) {
         rotation(event);
-        mDraggingSprite->move(mousePosition - *mPreviousMousePosition);
-        *mPreviousMousePosition = mousePosition;
+        mDraggingSprite->setPosition(mousePosition.x - (float)mDraggingTexture->getSize().x / 2,
+                                     mousePosition.y - (float)mDraggingTexture->getSize().y / 2);
     }
 }
 
 void Inventory::updateInventoryDraw(sf::Vector2f viewPosition, sf::Vector2f viewSize) {
-//    mBackground->move(move);
-//    for (sf::Sprite *figure: *mFiguresSprite) {
-//        figure->move(move);
-//    }
-    mBackground->setPosition(viewPosition);
-    mBackground->setSize(viewSize);
-    *mSizeOneFigure = sf::Vector2f(viewSize.x / (float)(*mCountOfX + 1), viewSize.y / (float)(*mCountOfX + 1));
-    //scale зависит только от длины(х) размера mSizeOneFigure
+    if (*mIsShowInformation) {
+        mFigures->at(*mClickFigureNumber)->updateInformationDrawing(viewPosition, viewSize);
+    } else {
+        mBackground->setPosition(viewPosition);
+        mBackground->setSize(viewSize);
+        *mSizeOneFigure = sf::Vector2f(viewSize.x / (float) (*mCountOfX + 1), viewSize.y / (float) (*mCountOfX + 1));
+        //scale зависит только от длины(х) размера mSizeOneFigure
 
-//    for (sf::Sprite *figure: *mFiguresSprite) {
-    for (int indFigure = 0; indFigure < mFiguresSprite->size(); ++indFigure) {
-        float scale = std::min(mSizeOneFigure->x / (float)mFiguresTexture->at(indFigure)->getSize().x,
-                               mSizeOneFigure->y / (float)mFiguresTexture->at(indFigure)->getSize().y);
-        mFiguresSprite->at(indFigure)->setScale(scale, scale);
-        mFiguresSprite->at(indFigure)->setPosition(viewPosition.x + (mSizeOneFigure->x + mSizeOneFigure->x / (float) *mCountOfX) * (float) (indFigure % *mCountOfX),
-                            viewPosition.y + (mSizeOneFigure->y + mSizeOneFigure->y / (float) *mCountOfX) * (float) (indFigure / *mCountOfX) + *mScrollDistance);
+        for (int indFigure = 0; indFigure < mFigures->size(); ++indFigure) {
+            float scale = std::min(mSizeOneFigure->x / (float) mFigures->at(indFigure)->getTexture().getSize().x,
+                                   mSizeOneFigure->y / (float) mFigures->at(indFigure)->getTexture().getSize().y);
+            mFigures->at(indFigure)->setScale(scale, scale);
+            mFigures->at(indFigure)->setPosition(viewPosition.x +
+                                                 (mSizeOneFigure->x + mSizeOneFigure->x / (float) (*mCountOfX - 1)) *
+                                                 (float) (indFigure % *mCountOfX),
+                                                 viewPosition.y +
+                                                 (mSizeOneFigure->y + mSizeOneFigure->y / (float) (*mCountOfX - 1)) *
+                                                 (float) (indFigure / *mCountOfX) + *mScrollDistance);
+        }
+        for (int indLine = 0; indLine < mVerticalLines->size(); ++indLine) {
+            mVerticalLines->at(indLine)->setSize(sf::Vector2f(mSizeOneFigure->x / 100, viewSize.y));
+            mVerticalLines->at(indLine)->setPosition(viewPosition.x + (mSizeOneFigure->x +
+                                                                       mSizeOneFigure->x / (float) (*mCountOfX - 1)) *
+                                                                      (float) ((indLine + 1) % *mCountOfX) -
+                                                     (mSizeOneFigure->x / (2 + (float) (*mCountOfX - 1))),
+                                                     viewPosition.y);
+        }
+        for (int indLine = 0; indLine < mHorizontalLines->size(); ++indLine) {
+            mHorizontalLines->at(indLine)->setSize(sf::Vector2f(viewSize.x, mSizeOneFigure->y / 100));
+            mHorizontalLines->at(indLine)->setPosition(viewPosition.x,
+                                                       viewPosition.y + (mSizeOneFigure->x +
+                                                                         mSizeOneFigure->x / (float) (*mCountOfX - 1)) *
+                                                                        (float) ((indLine + 1) % *mCountOfX) -
+                                                       (mSizeOneFigure->x / (2 + (float) (*mCountOfX - 1))) +
+                                                       *mScrollDistance);
+        }
     }
 }
 

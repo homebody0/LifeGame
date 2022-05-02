@@ -176,6 +176,30 @@ Classes/Field.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Field.cpp.s
 .PHONY : Classes/Field.cpp.s
 
+Classes/Figure.obj: Classes/Figure.cpp.obj
+.PHONY : Classes/Figure.obj
+
+# target to build an object file
+Classes/Figure.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Figure.cpp.obj
+.PHONY : Classes/Figure.cpp.obj
+
+Classes/Figure.i: Classes/Figure.cpp.i
+.PHONY : Classes/Figure.i
+
+# target to preprocess a source file
+Classes/Figure.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Figure.cpp.i
+.PHONY : Classes/Figure.cpp.i
+
+Classes/Figure.s: Classes/Figure.cpp.s
+.PHONY : Classes/Figure.s
+
+# target to generate assembly for a file
+Classes/Figure.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Figure.cpp.s
+.PHONY : Classes/Figure.cpp.s
+
 Classes/Game.obj: Classes/Game.cpp.obj
 .PHONY : Classes/Game.obj
 
@@ -287,6 +311,9 @@ help:
 	@echo ... Classes/Field.obj
 	@echo ... Classes/Field.i
 	@echo ... Classes/Field.s
+	@echo ... Classes/Figure.obj
+	@echo ... Classes/Figure.i
+	@echo ... Classes/Figure.s
 	@echo ... Classes/Game.obj
 	@echo ... Classes/Game.i
 	@echo ... Classes/Game.s

@@ -1,6 +1,6 @@
-CMakeFiles/Life.dir/Classes/Game.cpp.obj: \
- C:\GitHub\LifeGame\Life\Classes\Game.cpp \
- C:\GitHub\LifeGame\Life\Classes\Game.h \
+CMakeFiles/Life.dir/Classes/Figure.cpp.obj: \
+ C:\GitHub\LifeGame\Life\Classes\Figure.cpp \
+ C:\GitHub\LifeGame\Life\Classes\Figure.h \
  C:/SFML-2.5.1/include/SFML/Graphics.hpp \
  C:/SFML-2.5.1/include/SFML/Window.hpp \
  C:/SFML-2.5.1/include/SFML/System.hpp \
@@ -245,10 +245,4 @@ CMakeFiles/Life.dir/Classes/Game.cpp.obj: \
  C:/SFML-2.5.1/include/SFML/Graphics/Glsl.inl \
  C:/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp \
  C:/SFML-2.5.1/include/SFML/Graphics/Text.hpp \
- C:/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp \
- C:\GitHub\LifeGame\Life\Classes\Field.h \
- C:\GitHub\LifeGame\Life\Classes\Menu.h \
- C:\GitHub\LifeGame\Life\Classes\Button.h \
- C:\GitHub\LifeGame\Life\Classes\Inventory.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream \
- C:\GitHub\LifeGame\Life\Classes\Figure.h
+ C:/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 project(Life)
 set(CMAKE_CXX_STANDARD 17)
-add_executable(Life main.cpp Classes/Field.h Classes/Field.cpp Classes/Game.h Classes/Game.cpp Classes/Button.h Classes/Button.cpp Classes/Menu.h Classes/Menu.cpp Classes/Inventory.h Classes/Inventory.cpp)
+add_executable(Life main.cpp Classes/Field.h Classes/Field.cpp Classes/Game.h Classes/Game.cpp Classes/Button.h Classes/Button.cpp Classes/Menu.h Classes/Menu.cpp Classes/Inventory.h Classes/Inventory.cpp Classes/Figure.cpp Classes/Figure.h)
 set(SFML_ROOT C:/SFML-2.5.1)
 set(SFML_STATIC_LIBRARIES FALSE)
 #include_directories(${SFML_ROOT}/lib)

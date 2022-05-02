@@ -94,6 +94,12 @@
 		<Unit filename="C:/GitHub/LifeGame/Life/Classes/Field.h">
 			<Option target="Life"/>
 		</Unit>
+		<Unit filename="C:/GitHub/LifeGame/Life/Classes/Figure.cpp">
+			<Option target="Life"/>
+		</Unit>
+		<Unit filename="C:/GitHub/LifeGame/Life/Classes/Figure.h">
+			<Option target="Life"/>
+		</Unit>
 		<Unit filename="C:/GitHub/LifeGame/Life/Classes/Game.cpp">
 			<Option target="Life"/>
 		</Unit>

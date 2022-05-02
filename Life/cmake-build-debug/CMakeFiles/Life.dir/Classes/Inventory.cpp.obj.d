@@ -246,4 +246,5 @@ CMakeFiles/Life.dir/Classes/Inventory.cpp.obj: \
  C:/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp \
  C:/SFML-2.5.1/include/SFML/Graphics/Text.hpp \
  C:/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream \
+ C:\GitHub\LifeGame\Life\Classes\Figure.h

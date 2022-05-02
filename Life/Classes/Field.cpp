@@ -1,12 +1,10 @@
 #include "Field.h"
 #include <iostream>
 
-Field::Field(sf::Vector2u sizeWindow, const std::string& filename) {
+Field::Field(sf::Vector2u sizeWindow) {
     mField = new sf::Image();
-//    mField->loadFromFile(filename);
     mField->create(sizeWindow.x / 2, sizeWindow.y / 2);
     mImageSize = mField->getSize();
-//    mRenderSize = mSize;
     mFieldTexture = new sf::Texture;
     mFieldTexture->loadFromImage(*mField);
     mFieldSprite = new sf::Sprite;

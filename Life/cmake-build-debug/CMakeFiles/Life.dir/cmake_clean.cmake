@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Life.dir/Classes/Button.cpp.obj.d"
   "CMakeFiles/Life.dir/Classes/Field.cpp.obj"
   "CMakeFiles/Life.dir/Classes/Field.cpp.obj.d"
+  "CMakeFiles/Life.dir/Classes/Figure.cpp.obj"
+  "CMakeFiles/Life.dir/Classes/Figure.cpp.obj.d"
   "CMakeFiles/Life.dir/Classes/Game.cpp.obj"
   "CMakeFiles/Life.dir/Classes/Game.cpp.obj.d"
   "CMakeFiles/Life.dir/Classes/Inventory.cpp.obj"
