@@ -128,125 +128,125 @@ Life/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/build
 .PHONY : Life/fast
 
-Button.obj: Button.cpp.obj
-.PHONY : Button.obj
+Classes/Button.obj: Classes/Button.cpp.obj
+.PHONY : Classes/Button.obj
 
 # target to build an object file
-Button.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Button.cpp.obj
-.PHONY : Button.cpp.obj
+Classes/Button.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Button.cpp.obj
+.PHONY : Classes/Button.cpp.obj
 
-Button.i: Button.cpp.i
-.PHONY : Button.i
+Classes/Button.i: Classes/Button.cpp.i
+.PHONY : Classes/Button.i
 
 # target to preprocess a source file
-Button.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Button.cpp.i
-.PHONY : Button.cpp.i
+Classes/Button.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Button.cpp.i
+.PHONY : Classes/Button.cpp.i
 
-Button.s: Button.cpp.s
-.PHONY : Button.s
+Classes/Button.s: Classes/Button.cpp.s
+.PHONY : Classes/Button.s
 
 # target to generate assembly for a file
-Button.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Button.cpp.s
-.PHONY : Button.cpp.s
+Classes/Button.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Button.cpp.s
+.PHONY : Classes/Button.cpp.s
 
-Field.obj: Field.cpp.obj
-.PHONY : Field.obj
+Classes/Field.obj: Classes/Field.cpp.obj
+.PHONY : Classes/Field.obj
 
 # target to build an object file
-Field.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Field.cpp.obj
-.PHONY : Field.cpp.obj
+Classes/Field.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Field.cpp.obj
+.PHONY : Classes/Field.cpp.obj
 
-Field.i: Field.cpp.i
-.PHONY : Field.i
+Classes/Field.i: Classes/Field.cpp.i
+.PHONY : Classes/Field.i
 
 # target to preprocess a source file
-Field.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Field.cpp.i
-.PHONY : Field.cpp.i
+Classes/Field.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Field.cpp.i
+.PHONY : Classes/Field.cpp.i
 
-Field.s: Field.cpp.s
-.PHONY : Field.s
+Classes/Field.s: Classes/Field.cpp.s
+.PHONY : Classes/Field.s
 
 # target to generate assembly for a file
-Field.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Field.cpp.s
-.PHONY : Field.cpp.s
+Classes/Field.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Field.cpp.s
+.PHONY : Classes/Field.cpp.s
 
-Game.obj: Game.cpp.obj
-.PHONY : Game.obj
+Classes/Game.obj: Classes/Game.cpp.obj
+.PHONY : Classes/Game.obj
 
 # target to build an object file
-Game.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Game.cpp.obj
-.PHONY : Game.cpp.obj
+Classes/Game.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Game.cpp.obj
+.PHONY : Classes/Game.cpp.obj
 
-Game.i: Game.cpp.i
-.PHONY : Game.i
+Classes/Game.i: Classes/Game.cpp.i
+.PHONY : Classes/Game.i
 
 # target to preprocess a source file
-Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Game.cpp.i
-.PHONY : Game.cpp.i
+Classes/Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Game.cpp.i
+.PHONY : Classes/Game.cpp.i
 
-Game.s: Game.cpp.s
-.PHONY : Game.s
+Classes/Game.s: Classes/Game.cpp.s
+.PHONY : Classes/Game.s
 
 # target to generate assembly for a file
-Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Game.cpp.s
-.PHONY : Game.cpp.s
+Classes/Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Game.cpp.s
+.PHONY : Classes/Game.cpp.s
 
-Inventory.obj: Inventory.cpp.obj
-.PHONY : Inventory.obj
+Classes/Inventory.obj: Classes/Inventory.cpp.obj
+.PHONY : Classes/Inventory.obj
 
 # target to build an object file
-Inventory.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Inventory.cpp.obj
-.PHONY : Inventory.cpp.obj
+Classes/Inventory.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Inventory.cpp.obj
+.PHONY : Classes/Inventory.cpp.obj
 
-Inventory.i: Inventory.cpp.i
-.PHONY : Inventory.i
+Classes/Inventory.i: Classes/Inventory.cpp.i
+.PHONY : Classes/Inventory.i
 
 # target to preprocess a source file
-Inventory.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Inventory.cpp.i
-.PHONY : Inventory.cpp.i
+Classes/Inventory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Inventory.cpp.i
+.PHONY : Classes/Inventory.cpp.i
 
-Inventory.s: Inventory.cpp.s
-.PHONY : Inventory.s
+Classes/Inventory.s: Classes/Inventory.cpp.s
+.PHONY : Classes/Inventory.s
 
 # target to generate assembly for a file
-Inventory.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Inventory.cpp.s
-.PHONY : Inventory.cpp.s
+Classes/Inventory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Inventory.cpp.s
+.PHONY : Classes/Inventory.cpp.s
 
-Menu.obj: Menu.cpp.obj
-.PHONY : Menu.obj
+Classes/Menu.obj: Classes/Menu.cpp.obj
+.PHONY : Classes/Menu.obj
 
 # target to build an object file
-Menu.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Menu.cpp.obj
-.PHONY : Menu.cpp.obj
+Classes/Menu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Menu.cpp.obj
+.PHONY : Classes/Menu.cpp.obj
 
-Menu.i: Menu.cpp.i
-.PHONY : Menu.i
+Classes/Menu.i: Classes/Menu.cpp.i
+.PHONY : Classes/Menu.i
 
 # target to preprocess a source file
-Menu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Menu.cpp.i
-.PHONY : Menu.cpp.i
+Classes/Menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Menu.cpp.i
+.PHONY : Classes/Menu.cpp.i
 
-Menu.s: Menu.cpp.s
-.PHONY : Menu.s
+Classes/Menu.s: Classes/Menu.cpp.s
+.PHONY : Classes/Menu.s
 
 # target to generate assembly for a file
-Menu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Menu.cpp.s
-.PHONY : Menu.cpp.s
+Classes/Menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Life.dir\build.make CMakeFiles/Life.dir/Classes/Menu.cpp.s
+.PHONY : Classes/Menu.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -281,21 +281,21 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Life
-	@echo ... Button.obj
-	@echo ... Button.i
-	@echo ... Button.s
-	@echo ... Field.obj
-	@echo ... Field.i
-	@echo ... Field.s
-	@echo ... Game.obj
-	@echo ... Game.i
-	@echo ... Game.s
-	@echo ... Inventory.obj
-	@echo ... Inventory.i
-	@echo ... Inventory.s
-	@echo ... Menu.obj
-	@echo ... Menu.i
-	@echo ... Menu.s
+	@echo ... Classes/Button.obj
+	@echo ... Classes/Button.i
+	@echo ... Classes/Button.s
+	@echo ... Classes/Field.obj
+	@echo ... Classes/Field.i
+	@echo ... Classes/Field.s
+	@echo ... Classes/Game.obj
+	@echo ... Classes/Game.i
+	@echo ... Classes/Game.s
+	@echo ... Classes/Inventory.obj
+	@echo ... Classes/Inventory.i
+	@echo ... Classes/Inventory.s
+	@echo ... Classes/Menu.obj
+	@echo ... Classes/Menu.i
+	@echo ... Classes/Menu.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -82,34 +82,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/GitHub/LifeGame/Life/Button.cpp">
+		<Unit filename="C:/GitHub/LifeGame/Life/Classes/Button.cpp">
 			<Option target="Life"/>
 		</Unit>
-		<Unit filename="C:/GitHub/LifeGame/Life/Button.h">
+		<Unit filename="C:/GitHub/LifeGame/Life/Classes/Button.h">
 			<Option target="Life"/>
 		</Unit>
-		<Unit filename="C:/GitHub/LifeGame/Life/Field.cpp">
+		<Unit filename="C:/GitHub/LifeGame/Life/Classes/Field.cpp">
 			<Option target="Life"/>
 		</Unit>
-		<Unit filename="C:/GitHub/LifeGame/Life/Field.h">
+		<Unit filename="C:/GitHub/LifeGame/Life/Classes/Field.h">
 			<Option target="Life"/>
 		</Unit>
-		<Unit filename="C:/GitHub/LifeGame/Life/Game.cpp">
+		<Unit filename="C:/GitHub/LifeGame/Life/Classes/Game.cpp">
 			<Option target="Life"/>
 		</Unit>
-		<Unit filename="C:/GitHub/LifeGame/Life/Game.h">
+		<Unit filename="C:/GitHub/LifeGame/Life/Classes/Game.h">
 			<Option target="Life"/>
 		</Unit>
-		<Unit filename="C:/GitHub/LifeGame/Life/Inventory.cpp">
+		<Unit filename="C:/GitHub/LifeGame/Life/Classes/Inventory.cpp">
 			<Option target="Life"/>
 		</Unit>
-		<Unit filename="C:/GitHub/LifeGame/Life/Inventory.h">
+		<Unit filename="C:/GitHub/LifeGame/Life/Classes/Inventory.h">
 			<Option target="Life"/>
 		</Unit>
-		<Unit filename="C:/GitHub/LifeGame/Life/Menu.cpp">
+		<Unit filename="C:/GitHub/LifeGame/Life/Classes/Menu.cpp">
 			<Option target="Life"/>
 		</Unit>
-		<Unit filename="C:/GitHub/LifeGame/Life/Menu.h">
+		<Unit filename="C:/GitHub/LifeGame/Life/Classes/Menu.h">
 			<Option target="Life"/>
 		</Unit>
 		<Unit filename="C:/GitHub/LifeGame/Life/main.cpp">

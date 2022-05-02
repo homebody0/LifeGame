@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <cmath>
-#include "Game.h"
+#include "Classes/Game.h"
 
 using namespace sf;
 

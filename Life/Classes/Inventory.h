@@ -15,6 +15,7 @@ public:
     static void openInventory(sf::Event event, bool *isInventoryOpen, bool *isStop);
     ~Inventory() override;
 private:
+    void rotation(sf::Event event);
     int getFigureAt(sf::Vector2f mousePosition);
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
     std::vector<sf::Sprite*>* mFiguresSprite;
@@ -26,6 +27,7 @@ private:
     float* mScrollDistance;
 
     sf::Sprite* mDraggingSprite;
+    sf::Texture* mDraggingTexture;
     int* mDraggingSpriteNumber;
     sf::Vector2f* mPreviousMousePosition;
     bool* mIsDragging;

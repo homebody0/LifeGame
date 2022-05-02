@@ -7,7 +7,7 @@ Game::Game() {
     *mPreviousViewPosition = mCamera->getCenter();
 
     mWindow = new sf::RenderWindow(sf::VideoMode(800, 800), "My window");
-//    mWindow->setFramerateLimit(15);
+//    mWindow->setFramerateLimit(2);
 
     mMenu = new Menu(mCamera->getSize());
 
@@ -23,6 +23,7 @@ Game::Game() {
 
     mInventory = new Inventory(mCamera->getSize(), 3);
     mInventory->addFigure("..\\gunFigure.png");
+    mInventory->addFigure("..\\pinwheel.png");
 
     while (mWindow->isOpen()) {
         processing();
@@ -38,6 +39,9 @@ void Game::processing() {
         if (!*mIsMenuOpen) {
             Inventory::openInventory(*mEvent, mIsInventoryOpen, mIsStop);
             if (!*mIsInventoryOpen) {
+                if (mEvent->type == sf::Event::KeyReleased && mEvent->key.code == sf::Keyboard::C) {
+                    mField->clear();
+                }
                 scaleView();
                 moveView();
                 stopGameOfClickingOnSpace();

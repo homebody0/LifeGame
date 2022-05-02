@@ -83,99 +83,99 @@ CMakeFiles/Life.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Life.dir/main.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\LifeGame\Life\main.cpp -o CMakeFiles\Life.dir\main.cpp.s
 
-CMakeFiles/Life.dir/Field.cpp.obj: CMakeFiles/Life.dir/flags.make
-CMakeFiles/Life.dir/Field.cpp.obj: CMakeFiles/Life.dir/includes_CXX.rsp
-CMakeFiles/Life.dir/Field.cpp.obj: ../Field.cpp
-CMakeFiles/Life.dir/Field.cpp.obj: CMakeFiles/Life.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\LifeGame\Life\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Life.dir/Field.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Life.dir/Field.cpp.obj -MF CMakeFiles\Life.dir\Field.cpp.obj.d -o CMakeFiles\Life.dir\Field.cpp.obj -c C:\GitHub\LifeGame\Life\Field.cpp
+CMakeFiles/Life.dir/Classes/Field.cpp.obj: CMakeFiles/Life.dir/flags.make
+CMakeFiles/Life.dir/Classes/Field.cpp.obj: CMakeFiles/Life.dir/includes_CXX.rsp
+CMakeFiles/Life.dir/Classes/Field.cpp.obj: ../Classes/Field.cpp
+CMakeFiles/Life.dir/Classes/Field.cpp.obj: CMakeFiles/Life.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\LifeGame\Life\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Life.dir/Classes/Field.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Life.dir/Classes/Field.cpp.obj -MF CMakeFiles\Life.dir\Classes\Field.cpp.obj.d -o CMakeFiles\Life.dir\Classes\Field.cpp.obj -c C:\GitHub\LifeGame\Life\Classes\Field.cpp
 
-CMakeFiles/Life.dir/Field.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Life.dir/Field.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\LifeGame\Life\Field.cpp > CMakeFiles\Life.dir\Field.cpp.i
+CMakeFiles/Life.dir/Classes/Field.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Life.dir/Classes/Field.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\LifeGame\Life\Classes\Field.cpp > CMakeFiles\Life.dir\Classes\Field.cpp.i
 
-CMakeFiles/Life.dir/Field.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Life.dir/Field.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\LifeGame\Life\Field.cpp -o CMakeFiles\Life.dir\Field.cpp.s
+CMakeFiles/Life.dir/Classes/Field.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Life.dir/Classes/Field.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\LifeGame\Life\Classes\Field.cpp -o CMakeFiles\Life.dir\Classes\Field.cpp.s
 
-CMakeFiles/Life.dir/Game.cpp.obj: CMakeFiles/Life.dir/flags.make
-CMakeFiles/Life.dir/Game.cpp.obj: CMakeFiles/Life.dir/includes_CXX.rsp
-CMakeFiles/Life.dir/Game.cpp.obj: ../Game.cpp
-CMakeFiles/Life.dir/Game.cpp.obj: CMakeFiles/Life.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\LifeGame\Life\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Life.dir/Game.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Life.dir/Game.cpp.obj -MF CMakeFiles\Life.dir\Game.cpp.obj.d -o CMakeFiles\Life.dir\Game.cpp.obj -c C:\GitHub\LifeGame\Life\Game.cpp
+CMakeFiles/Life.dir/Classes/Game.cpp.obj: CMakeFiles/Life.dir/flags.make
+CMakeFiles/Life.dir/Classes/Game.cpp.obj: CMakeFiles/Life.dir/includes_CXX.rsp
+CMakeFiles/Life.dir/Classes/Game.cpp.obj: ../Classes/Game.cpp
+CMakeFiles/Life.dir/Classes/Game.cpp.obj: CMakeFiles/Life.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\LifeGame\Life\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Life.dir/Classes/Game.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Life.dir/Classes/Game.cpp.obj -MF CMakeFiles\Life.dir\Classes\Game.cpp.obj.d -o CMakeFiles\Life.dir\Classes\Game.cpp.obj -c C:\GitHub\LifeGame\Life\Classes\Game.cpp
 
-CMakeFiles/Life.dir/Game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Life.dir/Game.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\LifeGame\Life\Game.cpp > CMakeFiles\Life.dir\Game.cpp.i
+CMakeFiles/Life.dir/Classes/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Life.dir/Classes/Game.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\LifeGame\Life\Classes\Game.cpp > CMakeFiles\Life.dir\Classes\Game.cpp.i
 
-CMakeFiles/Life.dir/Game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Life.dir/Game.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\LifeGame\Life\Game.cpp -o CMakeFiles\Life.dir\Game.cpp.s
+CMakeFiles/Life.dir/Classes/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Life.dir/Classes/Game.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\LifeGame\Life\Classes\Game.cpp -o CMakeFiles\Life.dir\Classes\Game.cpp.s
 
-CMakeFiles/Life.dir/Button.cpp.obj: CMakeFiles/Life.dir/flags.make
-CMakeFiles/Life.dir/Button.cpp.obj: CMakeFiles/Life.dir/includes_CXX.rsp
-CMakeFiles/Life.dir/Button.cpp.obj: ../Button.cpp
-CMakeFiles/Life.dir/Button.cpp.obj: CMakeFiles/Life.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\LifeGame\Life\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Life.dir/Button.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Life.dir/Button.cpp.obj -MF CMakeFiles\Life.dir\Button.cpp.obj.d -o CMakeFiles\Life.dir\Button.cpp.obj -c C:\GitHub\LifeGame\Life\Button.cpp
+CMakeFiles/Life.dir/Classes/Button.cpp.obj: CMakeFiles/Life.dir/flags.make
+CMakeFiles/Life.dir/Classes/Button.cpp.obj: CMakeFiles/Life.dir/includes_CXX.rsp
+CMakeFiles/Life.dir/Classes/Button.cpp.obj: ../Classes/Button.cpp
+CMakeFiles/Life.dir/Classes/Button.cpp.obj: CMakeFiles/Life.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\LifeGame\Life\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Life.dir/Classes/Button.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Life.dir/Classes/Button.cpp.obj -MF CMakeFiles\Life.dir\Classes\Button.cpp.obj.d -o CMakeFiles\Life.dir\Classes\Button.cpp.obj -c C:\GitHub\LifeGame\Life\Classes\Button.cpp
 
-CMakeFiles/Life.dir/Button.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Life.dir/Button.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\LifeGame\Life\Button.cpp > CMakeFiles\Life.dir\Button.cpp.i
+CMakeFiles/Life.dir/Classes/Button.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Life.dir/Classes/Button.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\LifeGame\Life\Classes\Button.cpp > CMakeFiles\Life.dir\Classes\Button.cpp.i
 
-CMakeFiles/Life.dir/Button.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Life.dir/Button.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\LifeGame\Life\Button.cpp -o CMakeFiles\Life.dir\Button.cpp.s
+CMakeFiles/Life.dir/Classes/Button.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Life.dir/Classes/Button.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\LifeGame\Life\Classes\Button.cpp -o CMakeFiles\Life.dir\Classes\Button.cpp.s
 
-CMakeFiles/Life.dir/Menu.cpp.obj: CMakeFiles/Life.dir/flags.make
-CMakeFiles/Life.dir/Menu.cpp.obj: CMakeFiles/Life.dir/includes_CXX.rsp
-CMakeFiles/Life.dir/Menu.cpp.obj: ../Menu.cpp
-CMakeFiles/Life.dir/Menu.cpp.obj: CMakeFiles/Life.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\LifeGame\Life\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Life.dir/Menu.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Life.dir/Menu.cpp.obj -MF CMakeFiles\Life.dir\Menu.cpp.obj.d -o CMakeFiles\Life.dir\Menu.cpp.obj -c C:\GitHub\LifeGame\Life\Menu.cpp
+CMakeFiles/Life.dir/Classes/Menu.cpp.obj: CMakeFiles/Life.dir/flags.make
+CMakeFiles/Life.dir/Classes/Menu.cpp.obj: CMakeFiles/Life.dir/includes_CXX.rsp
+CMakeFiles/Life.dir/Classes/Menu.cpp.obj: ../Classes/Menu.cpp
+CMakeFiles/Life.dir/Classes/Menu.cpp.obj: CMakeFiles/Life.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\LifeGame\Life\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Life.dir/Classes/Menu.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Life.dir/Classes/Menu.cpp.obj -MF CMakeFiles\Life.dir\Classes\Menu.cpp.obj.d -o CMakeFiles\Life.dir\Classes\Menu.cpp.obj -c C:\GitHub\LifeGame\Life\Classes\Menu.cpp
 
-CMakeFiles/Life.dir/Menu.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Life.dir/Menu.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\LifeGame\Life\Menu.cpp > CMakeFiles\Life.dir\Menu.cpp.i
+CMakeFiles/Life.dir/Classes/Menu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Life.dir/Classes/Menu.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\LifeGame\Life\Classes\Menu.cpp > CMakeFiles\Life.dir\Classes\Menu.cpp.i
 
-CMakeFiles/Life.dir/Menu.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Life.dir/Menu.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\LifeGame\Life\Menu.cpp -o CMakeFiles\Life.dir\Menu.cpp.s
+CMakeFiles/Life.dir/Classes/Menu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Life.dir/Classes/Menu.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\LifeGame\Life\Classes\Menu.cpp -o CMakeFiles\Life.dir\Classes\Menu.cpp.s
 
-CMakeFiles/Life.dir/Inventory.cpp.obj: CMakeFiles/Life.dir/flags.make
-CMakeFiles/Life.dir/Inventory.cpp.obj: CMakeFiles/Life.dir/includes_CXX.rsp
-CMakeFiles/Life.dir/Inventory.cpp.obj: ../Inventory.cpp
-CMakeFiles/Life.dir/Inventory.cpp.obj: CMakeFiles/Life.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\LifeGame\Life\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Life.dir/Inventory.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Life.dir/Inventory.cpp.obj -MF CMakeFiles\Life.dir\Inventory.cpp.obj.d -o CMakeFiles\Life.dir\Inventory.cpp.obj -c C:\GitHub\LifeGame\Life\Inventory.cpp
+CMakeFiles/Life.dir/Classes/Inventory.cpp.obj: CMakeFiles/Life.dir/flags.make
+CMakeFiles/Life.dir/Classes/Inventory.cpp.obj: CMakeFiles/Life.dir/includes_CXX.rsp
+CMakeFiles/Life.dir/Classes/Inventory.cpp.obj: ../Classes/Inventory.cpp
+CMakeFiles/Life.dir/Classes/Inventory.cpp.obj: CMakeFiles/Life.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\LifeGame\Life\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Life.dir/Classes/Inventory.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Life.dir/Classes/Inventory.cpp.obj -MF CMakeFiles\Life.dir\Classes\Inventory.cpp.obj.d -o CMakeFiles\Life.dir\Classes\Inventory.cpp.obj -c C:\GitHub\LifeGame\Life\Classes\Inventory.cpp
 
-CMakeFiles/Life.dir/Inventory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Life.dir/Inventory.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\LifeGame\Life\Inventory.cpp > CMakeFiles\Life.dir\Inventory.cpp.i
+CMakeFiles/Life.dir/Classes/Inventory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Life.dir/Classes/Inventory.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\LifeGame\Life\Classes\Inventory.cpp > CMakeFiles\Life.dir\Classes\Inventory.cpp.i
 
-CMakeFiles/Life.dir/Inventory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Life.dir/Inventory.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\LifeGame\Life\Inventory.cpp -o CMakeFiles\Life.dir\Inventory.cpp.s
+CMakeFiles/Life.dir/Classes/Inventory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Life.dir/Classes/Inventory.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\LifeGame\Life\Classes\Inventory.cpp -o CMakeFiles\Life.dir\Classes\Inventory.cpp.s
 
 # Object files for target Life
 Life_OBJECTS = \
 "CMakeFiles/Life.dir/main.cpp.obj" \
-"CMakeFiles/Life.dir/Field.cpp.obj" \
-"CMakeFiles/Life.dir/Game.cpp.obj" \
-"CMakeFiles/Life.dir/Button.cpp.obj" \
-"CMakeFiles/Life.dir/Menu.cpp.obj" \
-"CMakeFiles/Life.dir/Inventory.cpp.obj"
+"CMakeFiles/Life.dir/Classes/Field.cpp.obj" \
+"CMakeFiles/Life.dir/Classes/Game.cpp.obj" \
+"CMakeFiles/Life.dir/Classes/Button.cpp.obj" \
+"CMakeFiles/Life.dir/Classes/Menu.cpp.obj" \
+"CMakeFiles/Life.dir/Classes/Inventory.cpp.obj"
 
 # External object files for target Life
 Life_EXTERNAL_OBJECTS =
 
 Life.exe: CMakeFiles/Life.dir/main.cpp.obj
-Life.exe: CMakeFiles/Life.dir/Field.cpp.obj
-Life.exe: CMakeFiles/Life.dir/Game.cpp.obj
-Life.exe: CMakeFiles/Life.dir/Button.cpp.obj
-Life.exe: CMakeFiles/Life.dir/Menu.cpp.obj
-Life.exe: CMakeFiles/Life.dir/Inventory.cpp.obj
+Life.exe: CMakeFiles/Life.dir/Classes/Field.cpp.obj
+Life.exe: CMakeFiles/Life.dir/Classes/Game.cpp.obj
+Life.exe: CMakeFiles/Life.dir/Classes/Button.cpp.obj
+Life.exe: CMakeFiles/Life.dir/Classes/Menu.cpp.obj
+Life.exe: CMakeFiles/Life.dir/Classes/Inventory.cpp.obj
 Life.exe: CMakeFiles/Life.dir/build.make
 Life.exe: C:/SFML-2.5.1/lib/libsfml-system-d.a
 Life.exe: C:/SFML-2.5.1/lib/libsfml-window-d.a

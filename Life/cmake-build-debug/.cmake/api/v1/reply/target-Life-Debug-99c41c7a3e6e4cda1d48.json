@@ -173,57 +173,57 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Field.h",
+			"path" : "Classes/Field.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Field.cpp",
+			"path" : "Classes/Field.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Game.h",
+			"path" : "Classes/Game.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Game.cpp",
+			"path" : "Classes/Game.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Button.h",
+			"path" : "Classes/Button.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Button.cpp",
+			"path" : "Classes/Button.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Menu.h",
+			"path" : "Classes/Menu.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Menu.cpp",
+			"path" : "Classes/Menu.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Inventory.h",
+			"path" : "Classes/Inventory.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Inventory.cpp",
+			"path" : "Classes/Inventory.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

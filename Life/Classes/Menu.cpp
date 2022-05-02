@@ -4,16 +4,16 @@ Menu::Menu(sf::Vector2f viewSize) {
     sf::Vector2f buttonsSize = sf::Vector2f(viewSize.x / 4, viewSize.x / 8);
 
     mButtons = new std::vector<Button*>{
-        new Button("../resume.png", buttonsSize, sf::Vector2f(viewSize.x / 2 - buttonsSize.x / 2,
+        new Button("../menuImages/resume.png", buttonsSize, sf::Vector2f(viewSize.x / 2 - buttonsSize.x / 2,
                                                               viewSize.y / 2 - 2 * buttonsSize.y)),
 
-        new Button("../inventory.png", buttonsSize, sf::Vector2f(viewSize.x / 2 - buttonsSize.x / 2,
+        new Button("../menuImages/inventory.png", buttonsSize, sf::Vector2f(viewSize.x / 2 - buttonsSize.x / 2,
                                                                viewSize.y / 2 - buttonsSize.y)),
 
-        new Button("../clear.png", buttonsSize, sf::Vector2f(viewSize.x / 2 - buttonsSize.x / 2,
+        new Button("../menuImages/clear.png", buttonsSize, sf::Vector2f(viewSize.x / 2 - buttonsSize.x / 2,
                                                                 viewSize.y / 2)),
 
-        new Button("../exit.png", buttonsSize, sf::Vector2f(viewSize.x / 2 - buttonsSize.x / 2,
+        new Button("../menuImages/exit.png", buttonsSize, sf::Vector2f(viewSize.x / 2 - buttonsSize.x / 2,
                                                             viewSize.y / 2 + buttonsSize.y))
     };
 

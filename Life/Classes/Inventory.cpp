@@ -16,6 +16,7 @@ Inventory::Inventory(sf::Vector2f sizeWindow, int countOnHorizontal) {
     mFiguresTexture = new std::vector<sf::Texture*>;
 
     mDraggingSprite = new sf::Sprite;
+    mDraggingTexture = new sf::Texture;
     mDraggingSpriteNumber = new int;
     mPreviousMousePosition = new sf::Vector2f;
     mIsDragging = new bool(false);
@@ -90,13 +91,14 @@ Inventory::~Inventory() {
     delete mBackground;
 
     delete mDraggingSprite;
+    delete mDraggingTexture;
     delete mDraggingSpriteNumber;
     delete mPreviousMousePosition;
     delete mIsDragging;
 }
 
 void Inventory::openInventory(sf::Event event, bool *isInventoryOpen, bool *isStop) {
-    if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::E) {
+    if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::F) {
         if (!*isStop) {
             *isStop = true;
         }
@@ -125,6 +127,7 @@ void Inventory::dragDrop(sf::Event event, sf::Vector2f mousePosition, sf::Sprite
         }
     }
     if (*mIsDragging) {
+        rotation(event);
         mDraggingSprite->move(mousePosition - *mPreviousMousePosition);
         *mPreviousMousePosition = mousePosition;
     }
@@ -139,12 +142,25 @@ void Inventory::updateInventoryDraw(sf::Vector2f viewPosition, sf::Vector2f view
     mBackground->setSize(viewSize);
     *mSizeOneFigure = sf::Vector2f(viewSize.x / (float)(*mCountOfX + 1), viewSize.y / (float)(*mCountOfX + 1));
     //scale зависит только от длины(х) размера mSizeOneFigure
-    float scale = std::min(mSizeOneFigure->x / (float)mFiguresTexture->back()->getSize().x,
-                           mSizeOneFigure->y / (float)mFiguresTexture->back()->getSize().y);
 
-    for (sf::Sprite *figure: *mFiguresSprite) {
-        figure->setScale(scale, scale);
-        figure->setPosition(viewPosition.x + (mSizeOneFigure->x + mSizeOneFigure->x / (float) *mCountOfX) * (float) ((mFiguresSprite->size() - 1) % *mCountOfX),
-                            viewPosition.y + (mSizeOneFigure->y + mSizeOneFigure->y / (float) *mCountOfX) * (float) ((mFiguresSprite->size() - 1) / *mCountOfX) + *mScrollDistance);
+//    for (sf::Sprite *figure: *mFiguresSprite) {
+    for (int indFigure = 0; indFigure < mFiguresSprite->size(); ++indFigure) {
+        float scale = std::min(mSizeOneFigure->x / (float)mFiguresTexture->at(indFigure)->getSize().x,
+                               mSizeOneFigure->y / (float)mFiguresTexture->at(indFigure)->getSize().y);
+        mFiguresSprite->at(indFigure)->setScale(scale, scale);
+        mFiguresSprite->at(indFigure)->setPosition(viewPosition.x + (mSizeOneFigure->x + mSizeOneFigure->x / (float) *mCountOfX) * (float) (indFigure % *mCountOfX),
+                            viewPosition.y + (mSizeOneFigure->y + mSizeOneFigure->y / (float) *mCountOfX) * (float) (indFigure / *mCountOfX) + *mScrollDistance);
     }
+}
+
+void Inventory::rotation(sf::Event event) {
+    sf::Image newImage =  mDraggingSprite->getTexture()->copyToImage();
+    if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Q) {
+        newImage.flipHorizontally();
+    }
+    if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::E) {
+        newImage.flipVertically();
+    }
+    mDraggingTexture->loadFromImage(newImage);
+    mDraggingSprite->setTexture(*mDraggingTexture);
 }
