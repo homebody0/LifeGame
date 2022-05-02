@@ -9,6 +9,7 @@ public:
     void updateCells();
     void addingLifeCells(sf::Event event, sf::Vector2f mousePosition);
     void inputFigure(const sf::Sprite& inputSprite);
+    void clear();
     ~Field() override;
 private:
     unsigned int countCells(unsigned int x, unsigned int y);

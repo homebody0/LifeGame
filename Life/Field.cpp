@@ -4,7 +4,7 @@
 Field::Field(sf::Vector2u sizeWindow, const std::string& filename) {
     mField = new sf::Image();
 //    mField->loadFromFile(filename);
-    mField->create(sizeWindow.x, sizeWindow.y);
+    mField->create(sizeWindow.x / 2, sizeWindow.y / 2);
     mImageSize = mField->getSize();
 //    mRenderSize = mSize;
     mFieldTexture = new sf::Texture;
@@ -94,5 +94,13 @@ void Field::inputFigure(const sf::Sprite& inputSprite) {
                  (unsigned int)inputSprite.getPosition().x,
                  (unsigned int)inputSprite.getPosition().y,
                  sf::IntRect(inputSprite.getLocalBounds()));
+}
+
+void Field::clear() {
+    for (unsigned int i = 0; i < mField->getSize().y; ++i) {
+        for (unsigned int j = 0; j < mField->getSize().x; ++j) {
+            mField->setPixel(j, i, sf::Color(0, 0, 0));
+        }
+    }
 }
 

@@ -19,6 +19,8 @@ Inventory::Inventory(sf::Vector2f sizeWindow, int countOnHorizontal) {
     mDraggingSpriteNumber = new int;
     mPreviousMousePosition = new sf::Vector2f;
     mIsDragging = new bool(false);
+
+    mScrollDistance = new float(0);
 }
 
 void Inventory::addFigure(const std::string& imageFilename) {
@@ -48,10 +50,20 @@ int Inventory::getFigureAt(sf::Vector2f mousePosition) {
     return -1;
 }
 
-void Inventory::scroll(float distance) {
-    for(sf::Sprite* figure: *mFiguresSprite) {
-        figure->move(sf::Vector2f(0.0f, distance));
+void Inventory::scroll(sf::Event *event) {
+    float distance = 20;
+    if (event->type == sf::Event::MouseWheelMoved) {
+        if (event->mouseWheel.delta < 0) {
+            for(sf::Sprite* figure: *mFiguresSprite) {
+                *mScrollDistance += distance;
+            }
+        } else {
+            for(sf::Sprite* figure: *mFiguresSprite) {
+                *mScrollDistance -= distance;
+            }
+        }
     }
+
 }
 
 void Inventory::draw(sf::RenderTarget &target, sf::RenderStates states) const {
@@ -133,6 +145,6 @@ void Inventory::updateInventoryDraw(sf::Vector2f viewPosition, sf::Vector2f view
     for (sf::Sprite *figure: *mFiguresSprite) {
         figure->setScale(scale, scale);
         figure->setPosition(viewPosition.x + (mSizeOneFigure->x + mSizeOneFigure->x / (float) *mCountOfX) * (float) ((mFiguresSprite->size() - 1) % *mCountOfX),
-                            viewPosition.y + (mSizeOneFigure->y + mSizeOneFigure->y / (float) *mCountOfX) * (float) ((mFiguresSprite->size() - 1) / *mCountOfX));
+                            viewPosition.y + (mSizeOneFigure->y + mSizeOneFigure->y / (float) *mCountOfX) * (float) ((mFiguresSprite->size() - 1) / *mCountOfX) + *mScrollDistance);
     }
 }

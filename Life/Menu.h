@@ -10,9 +10,11 @@ public:
     Menu(sf::Vector2f viewSize);
     void updateMenuDraw(sf::Vector2f viewPosition, sf::Vector2f viewSize);
     static void openMenu(sf::Event event, bool* isMenuOpen, bool* isStop);
+    void usingMenu(sf::Vector2f mousePosition, bool *isClear, bool *isMenuOpen, bool *isInventoryOpen,
+                   sf::RenderWindow *window);
     ~Menu() override;
 private:
-
+    enum whatButton{RESUME, FIGURES, CLEAR, EXIT};
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
     std::vector<Button*>* mButtons;
 };

@@ -7,10 +7,10 @@ Menu::Menu(sf::Vector2f viewSize) {
         new Button("../resume.png", buttonsSize, sf::Vector2f(viewSize.x / 2 - buttonsSize.x / 2,
                                                               viewSize.y / 2 - 2 * buttonsSize.y)),
 
-        new Button("../figures.png", buttonsSize, sf::Vector2f(viewSize.x / 2 - buttonsSize.x / 2,
+        new Button("../inventory.png", buttonsSize, sf::Vector2f(viewSize.x / 2 - buttonsSize.x / 2,
                                                                viewSize.y / 2 - buttonsSize.y)),
 
-        new Button("../settings.png", buttonsSize, sf::Vector2f(viewSize.x / 2 - buttonsSize.x / 2,
+        new Button("../clear.png", buttonsSize, sf::Vector2f(viewSize.x / 2 - buttonsSize.x / 2,
                                                                 viewSize.y / 2)),
 
         new Button("../exit.png", buttonsSize, sf::Vector2f(viewSize.x / 2 - buttonsSize.x / 2,
@@ -49,5 +49,21 @@ void Menu::updateMenuDraw(sf::Vector2f viewPosition, sf::Vector2f viewSize) {
                                                         viewSize.y / 2 - 2 * buttonsSize.y + biasVertical));
         button->setSize(buttonsSize);
         biasVertical += buttonsSize.y;
+    }
+}
+
+void Menu::usingMenu(sf::Vector2f mousePosition, bool *isClear, bool *isMenuOpen, bool *isInventoryOpen,
+                     sf::RenderWindow *window) {
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+        if (mButtons->at(RESUME)->isClick(mousePosition)) {
+            *isMenuOpen = false;
+        } else if (mButtons->at(FIGURES)->isClick(mousePosition)) {
+            *isInventoryOpen = true;
+            *isMenuOpen = false;
+        } else if (mButtons->at(CLEAR)->isClick(mousePosition)) {
+            *isClear = true;
+        } else if (mButtons->at(EXIT)->isClick(mousePosition)) {
+            window->close();
+        }
     }
 }

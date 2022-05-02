@@ -11,57 +11,57 @@ int main() {
 
 
 
-    sf::View camera(sf::FloatRect(0.0f, 0.0f, 80.0f, 80.0f));
-
-    sf::RenderWindow window(sf::VideoMode(800, 800), "My window");
-
-    sf::RectangleShape background(sf::Vector2f(800.0f, 800.0f));
-    background.setFillColor(sf::Color(120,120,120));
-
-    sf::Texture texture;
-    texture.loadFromFile("..\\gunFigure.png");
-
-    sf::Sprite sprite;
-    sprite.setTexture(texture);
-
-    sf::Texture texture1;
-    texture1.loadFromImage(texture.copyToImage());
-
-    bool isDrag = false;
-    sf::Vector2f mouseToOriginDistance;
-    sf::Vector2f mouse;
-
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) {
-                window.close();
-            }
-            if (event.type == sf::Event::MouseButtonReleased && event.mouseButton.button == sf::Mouse::Left) {
-                mouse = window.mapPixelToCoords(sf::Mouse::getPosition(window));
-                isDrag = !isDrag;
-            }
-            if(isDrag) {
-                sprite.move(sf::Vector2f(window.mapPixelToCoords(sf::Mouse::getPosition(window)) - mouse));
-                mouse = window.mapPixelToCoords(sf::Mouse::getPosition(window));
-            }
-            if (event.type == sf::Event::MouseWheelMoved) {
-                float zom = 1.2f;
-                if (event.mouseWheel.delta < 0) {
-                    camera.zoom(zom);
-                } else {
-                    camera.zoom(1.0f / zom);
-                }
-            }
-        }
-
-        window.clear();
-        window.draw(background);
-        window.draw(sprite);
-        window.setView(camera);
-        window.display();
-    }
-    return 0;
+//    sf::View camera(sf::FloatRect(0.0f, 0.0f, 80.0f, 80.0f));
+//
+//    sf::RenderWindow window(sf::VideoMode(800, 800), "My window");
+//
+//    sf::RectangleShape background(sf::Vector2f(800.0f, 800.0f));
+//    background.setFillColor(sf::Color(120,120,120));
+//
+//    sf::Texture texture;
+//    texture.loadFromFile("..\\gunFigure.png");
+//
+//    sf::Sprite sprite;
+//    sprite.setTexture(texture);
+//
+//    sf::Texture texture1;
+//    texture1.loadFromImage(texture.copyToImage());
+//
+//    bool isDrag = false;
+//    sf::Vector2f mouseToOriginDistance;
+//    sf::Vector2f mouse;
+//
+//    while (window.isOpen()) {
+//        sf::Event event;
+//        while (window.pollEvent(event)) {
+//            if (event.type == sf::Event::Closed) {
+//                window.close();
+//            }
+//            if (event.type == sf::Event::MouseButtonReleased && event.mouseButton.button == sf::Mouse::Left) {
+//                mouse = window.mapPixelToCoords(sf::Mouse::getPosition(window));
+//                isDrag = !isDrag;
+//            }
+//            if(isDrag) {
+//                sprite.move(sf::Vector2f(window.mapPixelToCoords(sf::Mouse::getPosition(window)) - mouse));
+//                mouse = window.mapPixelToCoords(sf::Mouse::getPosition(window));
+//            }
+//            if (event.type == sf::Event::MouseWheelMoved) {
+//                float zom = 1.2f;
+//                if (event.mouseWheel.delta < 0) {
+//                    camera.zoom(zom);
+//                } else {
+//                    camera.zoom(1.0f / zom);
+//                }
+//            }
+//        }
+//
+//        window.clear();
+//        window.draw(background);
+//        window.draw(sprite);
+//        window.setView(camera);
+//        window.display();
+//    }
+//    return 0;
 
 
 //    sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "Views", sf::Style::Fullscreen);

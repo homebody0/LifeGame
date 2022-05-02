@@ -10,12 +10,8 @@ Button::Button(const std::string& filenameImage, sf::Vector2f size, sf::Vector2f
     mButton->setPosition(position);
 }
 
-bool Button::isClick(sf::Event event) {
-    return (event.type == sf::Event::MouseButtonPressed
-                &&
-    ((float)event.mouseButton.x >= mButton->getPosition().x && (float)event.mouseButton.x <= mButton->getPosition().x + mButton->getSize().x
-                &&
-    (float)event.mouseButton.y >= mButton->getPosition().y && (float)event.mouseButton.y <= mButton->getPosition().y + mButton->getSize().y));
+bool Button::isClick(sf::Vector2f mousePosition) {
+    return mButton->getGlobalBounds().contains(mousePosition);
 }
 
 Button::~Button() {

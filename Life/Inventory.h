@@ -9,7 +9,7 @@ class Inventory: public sf::Drawable{
 public:
     Inventory(sf::Vector2f sizeWindow, int countOnHorizontal);
     void addFigure(const std::string& imageFilename);
-    void scroll(float distance);
+    void scroll(sf::Event *event);
     void updateInventoryDraw(sf::Vector2f viewPosition, sf::Vector2f viewSize);
     void dragDrop(sf::Event event, sf::Vector2f mousePosition, sf::Sprite *inputSprite, bool *isInput);
     static void openInventory(sf::Event event, bool *isInventoryOpen, bool *isStop);
@@ -22,6 +22,8 @@ private:
     int* mCountOfX;
     sf::Vector2f* mSizeOneFigure;
     sf::RectangleShape* mBackground;
+
+    float* mScrollDistance;
 
     sf::Sprite* mDraggingSprite;
     int* mDraggingSpriteNumber;

@@ -6,7 +6,7 @@ Game::Game() {
     mCamera = new sf::View(sf::FloatRect(0.0, 0.0, 80.0, 80.0));
     *mPreviousViewPosition = mCamera->getCenter();
 
-    mWindow = new sf::RenderWindow(sf::VideoMode(400, 400), "My window");
+    mWindow = new sf::RenderWindow(sf::VideoMode(800, 800), "My window");
 //    mWindow->setFramerateLimit(15);
 
     mMenu = new Menu(mCamera->getSize());
@@ -35,16 +35,17 @@ void Game::processing() {
             mWindow->close();
         }
         Menu::openMenu(*mEvent, mIsMenuOpen, mIsStop);
-        scaleView();
-        moveView();
         if (!*mIsMenuOpen) {
             Inventory::openInventory(*mEvent, mIsInventoryOpen, mIsStop);
             if (!*mIsInventoryOpen) {
+                scaleView();
+                moveView();
                 stopGameOfClickingOnSpace();
                 if (*mIsStop) {
                     mField->addingLifeCells(*mEvent, mWindow->mapPixelToCoords(sf::Mouse::getPosition(*mWindow), *mCamera));
                 }
             } else {
+                mInventory->scroll(mEvent);
                 bool* isInput = new bool(false);
                 auto* inputSprite = new sf::Sprite;
                 mInventory->dragDrop(*mEvent, mWindow->mapPixelToCoords(sf::Mouse::getPosition(*mWindow), *mCamera),
@@ -54,6 +55,13 @@ void Game::processing() {
                 }
                 delete isInput;
                 delete inputSprite;
+            }
+        } else {
+            bool *isClear = new bool(false);
+            mMenu->usingMenu(mWindow->mapPixelToCoords(sf::Mouse::getPosition(*mWindow), *mCamera), isClear, mIsMenuOpen,
+                             mIsInventoryOpen, mWindow);
+            if (*isClear) {
+                mField->clear();
             }
         }
     }
