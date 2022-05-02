@@ -1,11 +1,12 @@
 #include "Field.h"
 #include <iostream>
 
-Field::Field(sf::Vector2u size, const std::string& filename) {
+Field::Field(sf::Vector2u sizeWindow, const std::string& filename) {
     mField = new sf::Image();
-    mField->loadFromFile(filename);
+//    mField->loadFromFile(filename);
+    mField->create(sizeWindow.x, sizeWindow.y);
     mImageSize = mField->getSize();
-    mRenderSize = size;
+//    mRenderSize = mSize;
     mFieldTexture = new sf::Texture;
     mFieldTexture->loadFromImage(*mField);
     mFieldSprite = new sf::Sprite;
@@ -39,8 +40,8 @@ void Field::updateCells() {
 
 void Field::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     mFieldTexture->update(*mField);
-    mFieldSprite->setScale((float)target.getSize().x / mFieldTexture->getSize().x,
-                           (float)target.getSize().y / mFieldTexture->getSize().y);
+//    mFieldSprite->setScale((float)target.getSize().x / mFieldTexture->getSize().x,
+//                           (float)target.getSize().y / mFieldTexture->getSize().y);
     target.draw(*mFieldSprite);
 }
 
@@ -70,24 +71,14 @@ Field::~Field() {
     delete mFieldTexture;
 }
 
-void Field::addingLifeCells(sf::Event event) {
-
-    static sf::Vector2u mousePosition;
-    if (event.type == sf::Event::MouseMoved) {
-        mousePosition.x = event.mouseMove.x;
-        mousePosition.y = event.mouseMove.y;
-    }
-    if (event.type == sf::Event::MouseButtonPressed) {
-        mousePosition.x = event.mouseButton.x;
-        mousePosition.y = event.mouseButton.y;
-    }
+void Field::addingLifeCells(sf::Event event, sf::Vector2f mousePosition) {
     if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-        mField->setPixel(float(mousePosition.x) / mRenderSize.x * mImageSize.x,
-                         float(mousePosition.y) / mRenderSize.y * mImageSize.y, sf::Color(255, 255, 255));
+        mField->setPixel((unsigned int)(mousePosition.x),
+                         (unsigned int)(mousePosition.y), sf::Color(255, 255, 255));
     }
     else if (sf::Mouse::isButtonPressed(sf::Mouse::Right)) {
-        mField->setPixel(float(mousePosition.x) / mRenderSize.x * mImageSize.x,
-                         float(mousePosition.y) / mRenderSize.y * mImageSize.y, sf::Color(0, 0, 0));
+        mField->setPixel((unsigned int)(mousePosition.x),
+                         (unsigned int)(mousePosition.y), sf::Color(0, 0, 0));
     }
 
     if(event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Enter)
@@ -96,5 +87,12 @@ void Field::addingLifeCells(sf::Event event) {
     }
 
 
+}
+
+void Field::inputFigure(const sf::Sprite& inputSprite) {
+    mField->copy(inputSprite.getTexture()->copyToImage(),
+                 (unsigned int)inputSprite.getPosition().x,
+                 (unsigned int)inputSprite.getPosition().y,
+                 sf::IntRect(inputSprite.getLocalBounds()));
 }
 

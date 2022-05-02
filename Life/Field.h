@@ -5,15 +5,16 @@
 
 class Field : public sf::Drawable{
 public:
-    Field(sf::Vector2u mSize, const std::string& filename);
+    Field(sf::Vector2u sizeWindow, const std::string& filename);
     void updateCells();
-    unsigned int countCells(unsigned int x, unsigned int y);
-    void addingLifeCells(sf::Event event);
+    void addingLifeCells(sf::Event event, sf::Vector2f mousePosition);
+    void inputFigure(const sf::Sprite& inputSprite);
     ~Field() override;
 private:
+    unsigned int countCells(unsigned int x, unsigned int y);
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
     sf::Vector2u mImageSize;
-    sf::Vector2u mRenderSize;
+    sf::Vector2f mRenderSize;
     sf::Image* mField;
     sf::Texture* mFieldTexture;
     sf::Sprite* mFieldSprite;

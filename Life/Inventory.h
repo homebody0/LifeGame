@@ -7,21 +7,26 @@
 
 class Inventory: public sf::Drawable{
 public:
-    Inventory(sf::Vector2f sizeOneFigure, sf::Vector2u sizeWindow);
+    Inventory(sf::Vector2f sizeWindow, int countOnHorizontal);
     void addFigure(const std::string& imageFilename);
     void scroll(float distance);
+    void updateInventoryDraw(sf::Vector2f viewPosition, sf::Vector2f viewSize);
+    void dragDrop(sf::Event event, sf::Vector2f mousePosition, sf::Sprite *inputSprite, bool *isInput);
     static void openInventory(sf::Event event, bool *isInventoryOpen, bool *isStop);
-    sf::Image* getFigureAt(sf::Vector2f mousePosition);
     ~Inventory() override;
 private:
-    void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
-    static bool isFigureContainPoint(sf::Vector2f pointPosition, sf::FloatRect figure);
+    int getFigureAt(sf::Vector2f mousePosition);
+    void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
     std::vector<sf::Sprite*>* mFiguresSprite;
     std::vector<sf::Texture*>* mFiguresTexture;
-    std::vector<sf::Image*>* mFiguresImage;
     int* mCountOfX;
     sf::Vector2f* mSizeOneFigure;
     sf::RectangleShape* mBackground;
+
+    sf::Sprite* mDraggingSprite;
+    int* mDraggingSpriteNumber;
+    sf::Vector2f* mPreviousMousePosition;
+    bool* mIsDragging;
 };
 
 #endif //LIFE_INVENTORY_H

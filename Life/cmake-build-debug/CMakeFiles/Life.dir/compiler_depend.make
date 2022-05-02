@@ -1496,6 +1496,22 @@ CMakeFiles/Life.dir/main.cpp.obj: ../main.cpp \
   C:/SFML-2.5.1/include/SFML/Graphics/Text.hpp \
   C:/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cmath \
+  C:/mingw64/x86_64-w64-mingw32/include/math.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/specfun.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/gamma.tcc \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/special_function_util.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/bessel_function.tcc \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/special_function_util.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/beta_function.tcc \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/ell_integral.tcc \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/exp_integral.tcc \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/hypergeometric.tcc \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/legendre_function.tcc \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/modified_bessel_func.tcc \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/poly_hermite.tcc \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/poly_laguerre.tcc \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/riemann_zeta.tcc \
   ../Game.h \
   ../Field.h \
   ../Menu.h \
@@ -1571,6 +1587,10 @@ C:/SFML-2.5.1/include/SFML/System/Utf.hpp:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h:
 
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/exp_integral.tcc:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/ell_integral.tcc:
+
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_tree.h:
@@ -1602,6 +1622,8 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/stdint.h:
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_relops.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/typeinfo:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/poly_laguerre.tcc:
 
 C:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h:
 
@@ -1697,6 +1719,8 @@ C:/mingw64/x86_64-w64-mingw32/include/locale.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/stdio.h:
 
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/modified_bessel_func.tcc:
+
 C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h:
 
 C:/SFML-2.5.1/include/SFML/Window/Joystick.hpp:
@@ -1719,6 +1743,8 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/atomicity.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/pthread.h:
 
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/bessel_function.tcc:
+
 C:/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp:
 
 C:/mingw64/x86_64-w64-mingw32/include/errno.h:
@@ -1728,6 +1754,8 @@ C:/mingw64/x86_64-w64-mingw32/include/sys/types.h:
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_multimap.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/process.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/special_function_util.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h:
 
@@ -1961,6 +1989,10 @@ C:/SFML-2.5.1/include/SFML/Graphics/RenderStates.hpp:
 
 C:/SFML-2.5.1/include/SFML/Graphics/Transform.hpp:
 
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/beta_function.tcc:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/specfun.h:
+
 C:/SFML-2.5.1/include/SFML/Graphics/Rect.hpp:
 
 C:/SFML-2.5.1/include/SFML/Graphics/Transformable.hpp:
@@ -2010,3 +2042,17 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream:
 ../Menu.h:
 
 ../Menu.cpp:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cmath:
+
+C:/mingw64/x86_64-w64-mingw32/include/math.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/gamma.tcc:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/hypergeometric.tcc:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/legendre_function.tcc:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/poly_hermite.tcc:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tr1/riemann_zeta.tcc:

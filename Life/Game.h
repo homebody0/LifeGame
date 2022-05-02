@@ -13,12 +13,19 @@ public:
 private:
     void stopGameOfClickingOnSpace();
     void processing();
+    void moveView();
+    void scaleView();
 
     sf::RenderWindow* mWindow;
+    sf::View* mCamera;
+    sf::Vector2f* mPreviousViewPosition;
+
     sf::Event* mEvent;
+
     bool* mIsStop;
     bool* mIsMenuOpen;
     bool* mIsInventoryOpen;
+
     Field* mField;
     Menu* mMenu;
     Inventory* mInventory;

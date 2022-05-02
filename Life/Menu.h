@@ -7,13 +7,13 @@
 
 class Menu: public sf::Drawable{
 public:
-    Menu(sf::Vector2u sizeWindow);
+    Menu(sf::Vector2f viewSize);
+    void updateMenuDraw(sf::Vector2f viewPosition, sf::Vector2f viewSize);
     static void openMenu(sf::Event event, bool* isMenuOpen, bool* isStop);
     ~Menu() override;
 private:
 
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
-    sf::Vector2f* mButtonsSize;
     std::vector<Button*>* mButtons;
 };
 

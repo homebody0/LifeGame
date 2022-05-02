@@ -7,6 +7,8 @@ class Button: public sf::Drawable{
 public:
     Button(const std::string& filenameImage, sf::Vector2f size, sf::Vector2f position);
     bool isClick(sf::Event event);
+    void setSize(sf::Vector2f size);
+    void setPosition(sf::Vector2f position);
     enum whatButton{RESUME, SETTINGS, FIGURES, EXIT};
     ~Button() override;
 private:
