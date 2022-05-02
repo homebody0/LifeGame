@@ -3,11 +3,16 @@
 Game::Game() {
     mPreviousViewPosition = new sf::Vector2f;
 
-    mCamera = new sf::View(sf::FloatRect(0.0, 0.0, 80.0, 80.0));
-    *mPreviousViewPosition = mCamera->getCenter();
-
     mWindow = new sf::RenderWindow(sf::VideoMode(800, 800), "My window");
-//    mWindow->setFramerateLimit(2);
+    sf::Image image;
+    image.loadFromFile("..\\glider.png");
+    mWindow->setIcon(3, 3, image.getPixelsPtr());
+
+    mCamera = new sf::View(sf::FloatRect(mWindow->getSize().x / 4 - mWindow->getSize().x / 40,
+                                         mWindow->getSize().y / 4 - mWindow->getSize().y / 40,
+                                         mWindow->getSize().x / 20,
+                                         mWindow->getSize().y / 20));
+    *mPreviousViewPosition = mCamera->getCenter();
 
     mMenu = new Menu(mCamera->getSize());
 
@@ -24,6 +29,11 @@ Game::Game() {
     mInventory = new Inventory(mCamera->getSize(), 3);
     mInventory->addFigure("..\\gunFigure.png");
     mInventory->addFigure("..\\pinwheel.png");
+    mInventory->addFigure("..\\glider.png");
+    mInventory->addFigure("..\\pulsarCP48-56-72.png");
+    mInventory->addFigure("..\\superheavySpaceship.png");
+    mInventory->addFigure("..\\5-5-5-5-5-5-5.png");
+    mInventory->addFigure("..\\r.png");
 
     while (mWindow->isOpen()) {
         processing();
