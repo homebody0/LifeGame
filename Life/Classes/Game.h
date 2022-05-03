@@ -31,14 +31,14 @@ private:
     Menu* mMenu; //меню
     Inventory* mInventory; //инвентарь
 
-    bool *mIsFirstPlayGame;
-    bool *mIsFirstOpenInventory;
-    bool *mIsFirstPlayGameDisplayed;
-    bool *mIsFirstOpenInventoryDisplayed;
-    sf::Texture *mTextureGameControlInfo;
-    sf::Texture *mTextureInventoryControlInfo;
-    sf::Sprite *mGameControlInfo;
-    sf::Sprite *mInventoryControlInfo;
+    bool *mIsFirstPlayGame; // первый ли запуск игры
+    bool *mIsFirstOpenInventory; // первое ли открытие инвентаря
+    bool *mIsFirstPlayGameDisplayed; // отображается ли информация об управлении игрой
+    bool *mIsFirstOpenInventoryDisplayed; // отображается ли информация об управлении инвентарём
+    sf::Texture *mTextureGameControlInfo; // текстура информации об управлении игрой
+    sf::Texture *mTextureInventoryControlInfo; // текстура информации об управлении инвентарём
+    sf::Sprite *mGameControlInfo; // спрайт информации об управлении игрой
+    sf::Sprite *mInventoryControlInfo; // спрайт информации об управлении инвентарём
 };
 
 #endif //LIFE_GAME_H
